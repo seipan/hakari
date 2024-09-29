@@ -17,3 +17,7 @@ func NewContainer() (*Container, error) {
 		Client: cli,
 	}, nil
 }
+
+func (c *Container) Close() error {
+	return c.Client.Close()
+}
